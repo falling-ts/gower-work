@@ -13,3 +13,32 @@ ssh.settings {
     knownHosts = allowAnyHosts
     pty = true
 }
+
+task InstallGowerCli {
+    group 'gower-work'
+    description '安装命令行工具'
+
+    doFirst {
+        println '# go install -tags cli github.com/falling-ts/gower@latest'
+    }
+    doLast {
+        def goInstallCommand = "go install -tags cli github.com/falling-ts/gower@latest"
+        def goInstallProcess = new ProcessBuilder(goInstallCommand.split(' '))
+
+        def environment = goInstallProcess.environment()
+        environment.put('GOPATH', project.rootDir.getAbsolutePath())
+
+        def process = goInstallProcess.start()
+        process.inputStream.eachLine { line ->
+            println line
+        }
+        process.errorStream.eachLine { line ->
+            println line
+        }
+
+        process.waitFor()
+        if (process.exitValue() != 0) {
+            println 'go install 失败'
+        }
+    }
+}
