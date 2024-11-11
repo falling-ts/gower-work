@@ -14,3 +14,6 @@ pluginManagement {
 }
 
 rootProject.name = 'gower-work'
+
+include ':gower'
+project(':gower').projectDir = new File('src/gower')
