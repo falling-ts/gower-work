@@ -15,7 +15,7 @@ ssh.settings {
 }
 
 task InstallGowerCli {
-    group 'gower-work'
+    group 'init'
     description '安装命令行工具'
 
     doFirst {
