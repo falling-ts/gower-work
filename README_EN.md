@@ -33,7 +33,7 @@ System Requirements:
 ### Download Source Code
 
 ```shell
-$ git clone -b v0.6.0 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
+$ git clone -b v0.6.1 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
 ```
 
 

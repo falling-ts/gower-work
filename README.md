@@ -35,7 +35,7 @@ Go/Gin Gower Workspace 基于 Go 语言 Workspace 与 GOPATH 相结合实现工�
 ### 下载源码
 
 ```shell
-$ git clone -b v0.6.0 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
+$ git clone -b v0.6.1 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
 ```
 
 ### 使用 Goland 打开下载 `gower-work`
