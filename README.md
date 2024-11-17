@@ -288,8 +288,7 @@ pnpm
 
 ## 文档
 
-[Wiki 地址](https://gitee.com/falling-ts/gower/wikis/Home)
-[国内文档地址](https://learnku.com/docs/go-gin-gower/0.2.0)
+[文档地址](https://falling-ts.github.io/gower-docs)
 
 ## LICENSE
 
