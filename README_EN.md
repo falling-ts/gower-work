@@ -26,7 +26,7 @@ System Requirements:
 >
 > gradle == 8.10.2
 >
-> jvm >= 23
+> jdk >= 23
 
 ## Quick Start [Workspace Mode]
 
@@ -37,9 +37,9 @@ $ git clone -b v0.6.1 --single-branch --depth 1 https://github.com/falling-ts/go
 ```
 
 
-### Open `gower-work` with Goland
+### Open `gower-work` with GoLand
 
-- Install the Gradle plugin in Goland beforehand.
+- Install the Gradle plugin in GoLand beforehand.
 - When opening `gower-work` for the first time, you will be prompted to `Found Gradle 'gower-work' build script`, then click `Load Gradle project` to initialize the Gradle build system.
 - Find `Settings/GO/GOPATH/Project GOPATH`, and add the absolute path of the `gower-work` directory.
 - This way, when executing `go install` within the project, it will automatically install the binary to the `bin` directory.

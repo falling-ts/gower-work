@@ -28,7 +28,7 @@ Go/Gin Gower Workspace 基于 Go 语言 Workspace 与 GOPATH 相结合实现工�
 >
 > gradle == 8.10.2
 >
-> jvm >= 23
+> jdk >= 23
 
 ## 快速开始[工作区模式]
 
@@ -38,18 +38,18 @@ Go/Gin Gower Workspace 基于 Go 语言 Workspace 与 GOPATH 相结合实现工�
 $ git clone -b v0.6.1 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
 ```
 
-### 使用 Goland 打开下载 `gower-work`
+### 使用 GoLand 打开下载 `gower-work`
 
-- 提前在 Goland 中安装好 gradle 插件
-- 第一次使用 Goland 打开 `gower-work` 时，会提醒 `找到Gradle 'gower-work' 构建脚本`, 然后点击 `加载 Gradle 项目`, 会初始化 gradle 构建体系
+- 提前在 GoLand 中安装好 gradle 插件
+- 第一次使用 GoLand 打开 `gower-work` 时，会提醒 `找到Gradle 'gower-work' 构建脚本`, 然后点击 `加载 Gradle 项目`, 会初始化 gradle 构建体系
 - 找到 `设置/GO/GOPATH/项目GOPATH`, 添加 `gower-work` 所在的绝对目录
-- 这样在项目内执行 `go install` 时, 会自动把二进制安装到 bin 目录下
-- 项目目录下的 bin 也会添加到内置终端的环境变量中, 方便执行命令
+  - 这样在项目内执行 `go install` 时, 会自动把二进制安装到 bin 目录下
+  - 项目目录下的 bin 也会添加到内置终端的环境变量中, 方便执行命令
 
 ### 安装 Gower Cli 工具
 
 - 找到右侧 gradle 工具栏
-- 找打 `gower-work/Tasks/init/InstallGowerCli`, 双击运行, 将安装 gower.exe 至 bin 目录下
+- 找到 `gower-work/Tasks/init/InstallGowerCli`, 双击运行, 将安装 gower.exe 至 bin 目录下
 
 ### 新建一个 Gower 项目
 
