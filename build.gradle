@@ -14,10 +14,28 @@ ssh.settings {
     pty = true
 }
 
-task InstallGowerCli {
-    group 'init'
-    description '安装命令行工具'
+task t0001InstallGlobalGowerCli {
+    doFirst {
+        println '# go install -tags cli github.com/falling-ts/gower@latest'
+    }
+    doLast {
+        def goInstallProcess = "go install -tags cli github.com/falling-ts/gower@latest".execute()
 
+        goInstallProcess.inputStream.eachLine { line ->
+            println line
+        }
+        goInstallProcess.errorStream.eachLine { line ->
+            println line
+        }
+
+        goInstallProcess.waitFor()
+        if (goInstallProcess.exitValue() != 0) {
+            println 'Gower 全局安装失败'
+        }
+    }
+}
+
+task t0002InstallProjectGowerCli {
     doFirst {
         println '# go install -tags cli github.com/falling-ts/gower@latest'
     }
@@ -38,7 +56,15 @@ task InstallGowerCli {
 
         process.waitFor()
         if (process.exitValue() != 0) {
-            println 'go install 失败'
+            println 'Gower 项目环境安装失败'
         }
     }
+}
+
+task InstallGowerCli {
+    dependsOn t0001InstallGlobalGowerCli
+    dependsOn t0002InstallProjectGowerCli
+
+    group 'init'
+    description '安装命令行工具'
 }
