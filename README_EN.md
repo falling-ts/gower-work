@@ -4,7 +4,7 @@
 
 [Chinese](README.md)|[English](README_EN.md)
 
-[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square&logo=MIT)](LICENSE) [![benchmark](https://img.shields.io/badge/gower-benchmark-red?style=flat-square&logo=Sencha)]() [![actions](https://img.shields.io/badge/github-actions-green?style=flat-square&logo=GitHub)](https://github.com/falling-ts/gower/actions) [![version](https://img.shields.io/badge/version-0.8.0-yellow?style=flat-square&logo=V)]()
+[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square&logo=MIT)](LICENSE) [![benchmark](https://img.shields.io/badge/gower-benchmark-red?style=flat-square&logo=Sencha)]() [![actions](https://img.shields.io/badge/github-actions-green?style=flat-square&logo=GitHub)](https://github.com/falling-ts/gower/actions) [![version](https://img.shields.io/badge/version-0.8.1-yellow?style=flat-square&logo=V)]()
 
 ---
 
@@ -33,7 +33,7 @@ System Requirements:
 ### Download Source Code
 
 ```shell
-$ git clone -b v0.8.0 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
+$ git clone -b v0.8.1 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
 ```
 
 
