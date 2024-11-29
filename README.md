@@ -1,24 +1,22 @@
-[TOC]
-
 # Go/Gin Gower Workspace 工作目录
 
 ![](.github/images/logo.png)`workspace`
 
 [中文](README.md)|[English](README_EN.md)
 
-[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square&logo=MIT)](LICENSE) [![benchmark](https://img.shields.io/badge/gower-benchmark-red?style=flat-square&logo=Sencha)]() [![actions](https://img.shields.io/badge/github-actions-green?style=flat-square&logo=GitHub)](https://github.com/falling-ts/gower/actions) [![version](https://img.shields.io/badge/version-0.8.2-yellow?style=flat-square&logo=V)]()
+[![version](https://img.shields.io/badge/version-0.9.0-yellow?style=flat-square&logo=V)]()
 
 ---
 
-Go/Gin Gower Workspace 基于 Go 语言 Workspace 与 GOPATH 相结合实现工作区模式. 使用 Gradle 对多个 Gower 程序进行开发与打包管理, 实现类似微服务架构的一种模式.
+Go/Gin Gower Workspace 是基于 Go 语言 Workspace 与 GOPATH 相结合的实现工作区模式. 使用 Gradle 对多个单体项目进行开发与打包管理, 实现类似微服务架构的模式.
 
 系统要求:
 
 > go >= v1.23
 >
-> nodejs >= v16.13
+> nodejs >= v18.20
 >
-> pnpm >= v7.0
+> pnpm >= v9.12
 >
 > docker >= v20.10 [非必要]
 >
@@ -26,7 +24,7 @@ Go/Gin Gower Workspace 基于 Go 语言 Workspace 与 GOPATH 相结合实现工�
 >
 > git >= 2.39
 >
-> gradle == 8.10.2
+> gradle >= 8.10.2
 >
 > jdk >= 23
 
@@ -35,14 +33,14 @@ Go/Gin Gower Workspace 基于 Go 语言 Workspace 与 GOPATH 相结合实现工�
 ### 下载源码
 
 ```shell
-$ git clone -b v0.8.2 --single-branch --depth 1 https://github.com/falling-ts/gower-work.git
+$ git clone -b v0.9.0 --single-branch --depth 1 https://gitee.com/falling-ts/gower-work.git
 ```
 
 ### 使用 GoLand 打开下载 `gower-work`
 
 - 提前在 GoLand 中安装好 gradle 插件
 - 第一次使用 GoLand 打开 `gower-work` 时，会提醒 `找到Gradle 'gower-work' 构建脚本`, 然后点击 `加载 Gradle 项目`, 会初始化 gradle 构建体系
-- 找到 `设置/GO/GOPATH/项目GOPATH`, 添加 `gower-work` 所在的绝对目录
+- 找到 `settings/GO/GOPATH/Project GOPATH`, 添加 `gower-work` 所在的绝对目录
   - 这样在项目内执行 `go install` 时, 会自动把二进制安装到 bin 目录下
   - 项目目录下的 bin 也会添加到内置终端的环境变量中, 方便执行命令
 
@@ -135,9 +133,9 @@ $ gower make --controller Hello
 package controllers
 
 import (
-    "gower/app"
-    "gower/app/http/requests"
-    "gower/services"
+    "my-project/app"
+    "my-project/app/http/requests"
+    "my-project/services"
 )
 
 type HelloController struct {
@@ -166,7 +164,7 @@ $ gower make --request Hello
 ```shell
 package requests
 
-import "gower/app"
+import "my-project/app"
 
 type HelloRequest struct {
     app.Request
@@ -207,9 +205,9 @@ type Hello struct {
 package routes
 
 import (
-    web "gower/app/http/controllers"
-    mws "gower/app/http/middlewares"
-    "gower/public"
+    web "my-project/app/http/controllers"
+    mws "my-project/app/http/middlewares"
+    "my-project/public"
 )
 
 func init() {

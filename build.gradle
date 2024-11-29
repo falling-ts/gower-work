@@ -16,10 +16,10 @@ ssh.settings {
 
 task t0001InstallGlobalGowerCli {
     doFirst {
-        println '# go install -tags cli github.com/falling-ts/gower@v0.8.2'
+        println '# go install -tags cli gitee.com/falling-ts/gower@latest'
     }
     doLast {
-        def goInstallProcess = "go install -tags cli github.com/falling-ts/gower@v0.8.2".execute()
+        def goInstallProcess = "go install -tags cli gitee.com/falling-ts/gower@latest".execute()
 
         goInstallProcess.inputStream.eachLine { line ->
             println line
@@ -37,10 +37,10 @@ task t0001InstallGlobalGowerCli {
 
 task t0002InstallProjectGowerCli {
     doFirst {
-        println '# go install -tags cli github.com/falling-ts/gower@v0.8.2'
+        println '# go install -tags cli gitee.com/falling-ts/gower@latest'
     }
     doLast {
-        def goInstallCommand = "go install -tags cli github.com/falling-ts/gower@v0.8.2"
+        def goInstallCommand = "go install -tags cli gitee.com/falling-ts/gower@latest"
         def goInstallProcess = new ProcessBuilder(goInstallCommand.split(' '))
 
         def environment = goInstallProcess.environment()
